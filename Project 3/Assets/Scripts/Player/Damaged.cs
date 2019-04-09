@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Damaged : MonoBehaviour
 {
+    [Header("Rep the number of collisions an object can endure")]
     public int health = 1;
+    [Header("Invuln only for the player")]
     float invulnTimer = 0;
     int correctLayer;
 

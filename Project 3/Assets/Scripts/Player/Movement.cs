@@ -22,9 +22,11 @@ public class Movement : MonoBehaviour
     {
         //Rotate the Ship
         Quaternion rot = transform.rotation;
+       
         //Change z based on input
         float z = rot.eulerAngles.z;
         z += -Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime;
+        
         //Recreate out Quat and assign
         rot = Quaternion.Euler(0, 0, z);
         transform.rotation = rot;

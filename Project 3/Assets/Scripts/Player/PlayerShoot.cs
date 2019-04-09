@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public Vector3 bulletOffset = new Vector3(0, 0.5f, 0);
+    [Header("Fire Rate")]
+    public Vector3 laserOffset = new Vector3(0, 0.5f, 0);
 
-    public GameObject bulletPrefab;
-    int bulletLayer;
+    public GameObject laserPrefab;
+    // We keep the layer for security purposes
+    private int laserLayer;
 
     public float fireDelay = 0.25f;
-    float cooldownTimer = 0;
+    private float cooldownTimer = 0;
 
     void Start()
     {
-        bulletLayer = gameObject.layer;
+        laserLayer = gameObject.layer;
     }
 
     
@@ -27,10 +29,10 @@ public class PlayerShoot : MonoBehaviour
             // SHOOT!
             cooldownTimer = fireDelay;
 
-            Vector3 offset = transform.rotation * bulletOffset;
+            Vector3 offset = transform.rotation * laserOffset;
 
-            GameObject bulletGO = Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
-            bulletGO.layer = bulletLayer;
+            GameObject laserGO = Instantiate(laserPrefab, transform.position + offset, transform.rotation);
+            laserGO.layer = laserLayer;
         }
     }
 }
