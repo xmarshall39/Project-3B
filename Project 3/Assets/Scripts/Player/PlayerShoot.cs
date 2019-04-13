@@ -39,7 +39,7 @@ public class PlayerShoot : MonoBehaviour
 
         if( Input.GetButton("Fire2") && cooldownTimer <= 0)
         {
-            //Shoot the triple laser
+            //Shoot the burst laser
             cooldownTimer = tfireDelay;
             
             Vector3 offset = transform.rotation * laserOffset;
