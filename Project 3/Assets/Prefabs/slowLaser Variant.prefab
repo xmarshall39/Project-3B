@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1259463009420112067, guid: 41228324e9641e545bf9ca52846471b8,
         type: 3}
       propertyPath: m_Name
-      value: slowLaser
+      value: slowLaser Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1259463009420112078, guid: 41228324e9641e545bf9ca52846471b8,
         type: 3}
@@ -71,6 +71,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380718947459490272, guid: 41228324e9641e545bf9ca52846471b8,
+        type: 3}
+      propertyPath: lifeSpan
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41228324e9641e545bf9ca52846471b8, type: 3}
