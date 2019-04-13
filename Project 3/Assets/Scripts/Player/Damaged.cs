@@ -10,15 +10,22 @@ public class Damaged : MonoBehaviour
     float invulnTimer = 0;
     int correctLayer;
 
+    //Vars for exploding the object on death
+    public ParticleSystem ps;
+
+
+    private string type;
+    private bool killed = false;
+    
+
     private void Start()
     {
+        print("Starting");
         correctLayer = this.gameObject.layer;
+        type = this.gameObject.tag;
+        
     }
-    //Collision will never be set off
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        print("Collision");
-    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,7 +33,10 @@ public class Damaged : MonoBehaviour
         if(invulnTimer <= 0)
         {
             health--;
-            invulnTimer = 2f;
+            if (type == "Player")
+                invulnTimer = 2f;
+            else
+                invulnTimer = .2f;
             //Puts the player on a contactless invuln layer
             this.gameObject.layer = 10;
         }
@@ -41,15 +51,22 @@ public class Damaged : MonoBehaviour
         if(invulnTimer <= 0)
         {
             this.gameObject.layer = correctLayer;
+            
         }
-        if (health <= 0)
+
+        if (health <= 0 && !killed)
         {
-            Die();
+            print(killed);
+            
+            ExplodeMe();
         }
     }
 
-    void Die()
+    void ExplodeMe()
     {
+        killed = true;
+        Instantiate(ps, transform.position, transform.rotation);
         Destroy(this.gameObject);
+        
     }
 }
