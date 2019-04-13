@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3185517179968841525}
   - component: {fileID: 3185517179968841522}
+  - component: {fileID: 3683735386062086795}
   - component: {fileID: 3185517179968841523}
   m_Layer: 0
   m_Name: LaserExplosion
@@ -4694,6 +4695,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &3683735386062086795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185517179968841520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46934e54907c94f49add814e4bec65aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeSpan: 5
 --- !u!199 &3185517179968841523
 ParticleSystemRenderer:
   serializedVersion: 6

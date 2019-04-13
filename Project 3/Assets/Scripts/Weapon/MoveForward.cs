@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LazerMovement : MonoBehaviour
+public class MoveForward : MonoBehaviour
 {
    
     public float maxSpeed = 5f;

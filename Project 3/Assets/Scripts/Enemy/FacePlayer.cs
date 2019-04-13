@@ -5,6 +5,7 @@ using UnityEngine;
 public class FacePlayer : MonoBehaviour
 {
     //We choose not to ref the player in case of respawn
+    public float rotSpeed = 180f;
     private Transform player;
 
 
@@ -30,7 +31,8 @@ public class FacePlayer : MonoBehaviour
 
         float zAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
 
-        transform.rotation = Quaternion.Euler(0, 0, zAngle);
+        Quaternion desiredRot = Quaternion.Euler(0, 0, zAngle);
 
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRot, rotSpeed * Time.deltaTime);
     }
 }
