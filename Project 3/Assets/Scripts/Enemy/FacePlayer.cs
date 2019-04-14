@@ -14,7 +14,7 @@ public class FacePlayer : MonoBehaviour
     {
         if (!player)
         {
-            GameObject target = GameObject.Find("Player");
+            GameObject target = GameObject.Find("Player(Clone)");
 
             if (target)
                 player = target.transform;
