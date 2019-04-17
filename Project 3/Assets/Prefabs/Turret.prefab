@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 958299747}
   - component: {fileID: 958299749}
   - component: {fileID: 5637479891634202229}
+  - component: {fileID: 4590861093465077343}
   m_Layer: 9
   m_Name: Turret
   m_TagString: Enemy
@@ -316,3 +317,16 @@ MonoBehaviour:
   laserPrefab: {fileID: 7601205110649510968, guid: 2c658b4a4eb21cf489064f01d8dd71d1,
     type: 3}
   fireDelay: 1
+--- !u!114 &4590861093465077343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8344063961752708920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55825bc5cb0706245a5dd6b6ae9a59b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretSpeed: 3.5

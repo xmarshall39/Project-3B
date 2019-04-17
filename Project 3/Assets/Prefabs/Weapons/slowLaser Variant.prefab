@@ -72,10 +72,30 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1259463009420112079, guid: 41228324e9641e545bf9ca52846471b8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259463009420112079, guid: 41228324e9641e545bf9ca52846471b8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.06806326
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259463009420112079, guid: 41228324e9641e545bf9ca52846471b8,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259463009420112079, guid: 41228324e9641e545bf9ca52846471b8,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.9036279
+      objectReference: {fileID: 0}
     - target: {fileID: 2380718947459490272, guid: 41228324e9641e545bf9ca52846471b8,
         type: 3}
       propertyPath: lifeSpan
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41228324e9641e545bf9ca52846471b8, type: 3}
