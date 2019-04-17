@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
    
     //Current Player
     private GameObject playerInstance;
+    private GameTimer gt;
 
     public int Lives = 4;
 
@@ -22,6 +23,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        gt = GetComponent<GameTimer>();
         Spawn();
     }
 
@@ -43,6 +45,8 @@ public class PlayerManager : MonoBehaviour
         if (Lives > 0 || playerInstance != null)
         {
             GUI.Label(new Rect(0, 0, 100, 50), "Lives Left: " + Lives);
+
+            GUI.Label(new Rect(165, 200, 100, 50), ("Time: " + Math.Round(gt.time, 2)));
         }
         else
         {

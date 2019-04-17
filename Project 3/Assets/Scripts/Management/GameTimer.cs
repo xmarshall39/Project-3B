@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -37,4 +38,6 @@ public class GameTimer : MonoBehaviour
     {
         time = 0;
     }
+
+
 }
